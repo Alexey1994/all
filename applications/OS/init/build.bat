@@ -1,0 +1,1 @@
+@tcc src/main.c -w -Isrc/include -c -nostdlib -fno-builtin -o ./bin/init.elf && "bin/ld" -T ./bin/script.ld -o ./bin/init.o ./bin/init.elf && "bin/objcopy" -O binary -R .note -R .comment -S ./bin/init.o ./bin/init && write-init.c || pause

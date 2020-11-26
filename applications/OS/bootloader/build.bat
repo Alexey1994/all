@@ -1,0 +1,1 @@
+@nasm ./src/loader.asm -o ./bin/loader && write-bootloader.c || pause
